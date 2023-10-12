@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -29,4 +30,14 @@ h1 {
     margin-right: 70px;
     background-color: grey;
     border: aliceblue 2px solid;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxes16 {
+    width: 27px;
+    height: 27px;
+    background-color: black;
+    flex-grow: 1;
+    border: purple 1px solid;
 }
