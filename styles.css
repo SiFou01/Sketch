@@ -24,7 +24,7 @@ h1 {
 }
 
 #sketch-box {
-    height: 470px;
+    height: 464px;
     width: 470px;
     margin-left: auto;
     margin-right: 70px;
@@ -34,10 +34,23 @@ h1 {
     flex-wrap: wrap;
 }
 
+.boxes {
+    background-color: black;
+    flex-grow: 1;
+    border: purple 0.1px solid;
+}
+
+.boxes8 {
+    width: 54px;
+    height: 54px;
+}
+
 .boxes16 {
     width: 27px;
     height: 27px;
-    background-color: black;
-    flex-grow: 1;
-    border: purple 1px solid;
+}
+
+.boxes32 {
+    width: 12.5px;
+    height: 12.5px;
 }
