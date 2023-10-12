@@ -11,8 +11,22 @@ body {
 h1 {
     margin: 0;
     text-align: center;
-    font-family: 'AR One Sans';/*, sans-serif;*/
+    font-family: 'AR One Sans', sans-serif;
     color: gold;
     font-size: 40px;
     padding-top: 15px;
+}
+
+#container {
+    display: flex;
+    margin-top: 55px;
+}
+
+#sketch-box {
+    height: 470px;
+    width: 470px;
+    margin-left: auto;
+    margin-right: 70px;
+    background-color: grey;
+    border: aliceblue 2px solid;
 }
