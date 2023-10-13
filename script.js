@@ -88,3 +88,19 @@ function reset() {
 function erase() {
     selectedColor = "rgb(88, 81, 81)";
 }
+
+let select = document.querySelector("select");
+
+select.addEventListener("change", changeEventListener);
+
+function changeEventListener() {
+    switch (select.value) {
+        case "hover" :
+            sketchBox.removeEventListener("click", changeColor);
+            sketchBox.addEventListener("mouseover", changeColor);
+            break;
+        case "click" :
+            sketchBox.removeEventListener("mouseover", changeColor);
+            sketchBox.addEventListener("click", changeColor);
+    }
+}
