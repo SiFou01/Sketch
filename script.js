@@ -76,5 +76,11 @@ function changeColor(box) {
 let selectedColor = "black";
 
 function getSelectedColor() {
-selectedColor = document.querySelector("input").value;
+    selectedColor = document.querySelector("input").value;
+}
+
+function reset() {
+    for (let box of boxes) {
+        box.style.backgroundColor = "rgb(88, 81, 81)";
+    }
 }

@@ -23,6 +23,12 @@ h1 {
     margin-top: 55px;
 }
 
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 #sketch-box {
     height: 464px;
     width: 464px;
