@@ -66,3 +66,9 @@ function changeGridLines() {
         click--;
     }
 }
+
+sketchBox.addEventListener("mouseover", changeColor);
+
+function changeColor(box) {
+    box.target.style.backgroundColor = "gray";
+}
