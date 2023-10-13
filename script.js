@@ -84,3 +84,7 @@ function reset() {
         box.style.backgroundColor = "rgb(88, 81, 81)";
     }
 }
+
+function erase() {
+    selectedColor = "rgb(88, 81, 81)";
+}
