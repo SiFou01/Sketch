@@ -69,7 +69,21 @@ function changeGridLines() {
 
 sketchBox.addEventListener("mouseover", changeColor);
 
+
+let rainbowColors = ["red","yellow","pink","purple","orange","blue",
+"green","brown","black","white","cadetblue","chocolate","coral","gold","aliceblue","honeydew","hotpink"];
+
+let activate = 0;
+
+function activateRainbowMode() {
+    selectedColor = rainbowColors[Math.floor(Math.random() * 17)];
+    activate++;
+}
+
 function changeColor(box) {
+    if (activate) {
+        activateRainbowMode();
+    }
     box.target.style.backgroundColor = selectedColor;
 }
 
