@@ -34,7 +34,7 @@ h1 {
 }
 
 .boxes {
-    background-color: black;
+    background-color: rgb(88, 81, 81);
     flex-grow: 1;
     border: purple 0.1px solid;
 }

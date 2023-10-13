@@ -70,5 +70,11 @@ function changeGridLines() {
 sketchBox.addEventListener("mouseover", changeColor);
 
 function changeColor(box) {
-    box.target.style.backgroundColor = "gray";
+    box.target.style.backgroundColor = selectedColor;
+}
+
+let selectedColor = "black";
+
+function getSelectedColor() {
+selectedColor = document.querySelector("input").value;
 }
