@@ -1,17 +1,8 @@
 let sketchBox = document.getElementById("sketch-box");
 
-for (let i = 0; i < 256; i++) {
-    let boxes = document.createElement("div");
-    boxes.classList.add("boxes");
-    boxes.classList.add("boxes16");
-    sketchBox.appendChild(boxes);
-}
+let boxes;
 
-let boxes = document.querySelectorAll("div.boxes");
-
-let boxes8 = document.getElementById("btn8");
-let boxes16 = document.getElementById("btn16");
-let boxes32 = document.getElementById("btn32");
+changeBoxes(16);
 
 function changeBoxes(num) {
     while (sketchBox.firstChild) {
@@ -20,26 +11,58 @@ function changeBoxes(num) {
     switch (num) {
         case 8 :
             for (let i = 0; i < 64; i++) {
-                let boxes = document.createElement("div");
-                boxes.classList.add("boxes");
-                boxes.classList.add("boxes8");
-                sketchBox.appendChild(boxes);
+                let box = document.createElement("div");
+                box.classList.add("boxes");
+                box.classList.add("boxes8");
+                sketchBox.appendChild(box);
             }
             break;
         case 16 :
             for (let i = 0; i < 256; i++) {
-                let boxes = document.createElement("div");
-                boxes.classList.add("boxes");
-                boxes.classList.add("boxes16");
-                sketchBox.appendChild(boxes);
+                let box = document.createElement("div");
+                box.classList.add("boxes");
+                box.classList.add("boxes16");
+                sketchBox.appendChild(box);
             }
             break;
         case 32 :
             for (let i = 0; i < 1024; i++) {
-                let boxes = document.createElement("div");
-                boxes.classList.add("boxes");
-                boxes.classList.add("boxes32");
-                sketchBox.appendChild(boxes);
+                let box = document.createElement("div");
+                box.classList.add("boxes");
+                box.classList.add("boxes32");
+                sketchBox.appendChild(box);
             }
+    }
+    boxes = document.querySelectorAll("div.boxes");
+}
+
+let click = 0;
+
+function changeGridLines() {
+    if (click === 0) {
+        if (boxes.length === 1024) {
+            for (let box of boxes) {
+                box.classList.add("no-grid-32");
+            }
+        }
+        else if (boxes.length === 256) {
+            for (let box of boxes) {
+                box.classList.add("no-grid-16");
+            }
+        }
+        else {
+            for (let box of boxes) {
+                box.classList.add("no-grid-8");
+            }
+        }
+        click++;
+    }
+    else {
+        for (let box of boxes) {
+            box.classList.remove("no-grid-32");
+            box.classList.remove("no-grid-16");
+            box.classList.remove("no-grid-8");
+        }
+        click--;
     }
 }
