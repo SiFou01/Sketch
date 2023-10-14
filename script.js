@@ -109,11 +109,11 @@ select.addEventListener("change", changeEventListener);
 
 function changeEventListener() {
     switch (select.value) {
-        case "hover" :
+        case "HOVER" :
             sketchBox.removeEventListener("click", changeColor);
             sketchBox.addEventListener("mouseover", changeColor);
             break;
-        case "click" :
+        case "CLICK" :
             sketchBox.removeEventListener("mouseover", changeColor);
             sketchBox.addEventListener("click", changeColor);
     }

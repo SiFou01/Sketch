@@ -14,18 +14,20 @@
     <div id="container">
         <div id="options">
             <input id="color-selector" type="color" onchange="getSelectedColor()">
+            <select>
+                <option>HOVER</option>
+                <option>CLICK</option>
+            </select>
             <div id="box-size">
                 <button onclick="changeBoxes(8)">8x8</button>
                 <button onclick="changeBoxes(16)">16x16</button>
                 <button onclick="changeBoxes(32)">32x32</button>
             </div>
             <button onclick="changeGridLines()">HIDE GRID LINES</button>
+            <div id="reset-erase">
             <button onclick="reset()">Reset</button>
             <button onclick="erase()">Eraser</button>
-            <select>
-                <option>hover</option>
-                <option>click</option>
-            </select>
+            </div>
             <button onclick="activateRainbowMode()">Rainbow mode</button>
             <button onclick="activateGrayScale()">Gray Scale</button>
         </div>
