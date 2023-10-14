@@ -17,10 +17,12 @@
                 <p>Pen Color</p>
                 <input id="color-selector" type="color" onchange="getSelectedColor()">
             </div>
-            <select>
-                <option>HOVER</option>
-                <option>CLICK</option>
-            </select>
+            <div class="select">
+                <select>
+                    <option>HOVER</option>
+                    <option>CLICK</option>
+                </select>
+            </div>
             <div id="box-size">
                 <button onclick="changeBoxes(8)" id="btn8">8x8</button>
                 <button onclick="changeBoxes(16)" class="selected" id="btn16">16x16</button>
