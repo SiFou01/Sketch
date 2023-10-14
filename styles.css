@@ -156,3 +156,16 @@ select{
     font-size: 20px;
     font-family: monospace;
 }
+
+h2 {
+    font-family: "Merienda", cursive;
+    color: gold;
+    text-align: end;
+    padding-right: 15px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+}
