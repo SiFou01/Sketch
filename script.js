@@ -95,7 +95,7 @@ function getSelectedColor() {
 
 function reset() {
     for (let box of boxes) {
-        box.style.backgroundColor = "rgb(88, 81, 81)";
+    box.style.backgroundColor = "#CDC7E5";
     }
 }
 
