@@ -28,7 +28,7 @@ h1 {
 #options {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 35px;
     background-color: #1B0425;
     padding: 20px;
     border-radius: 25px;

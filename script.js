@@ -46,39 +46,7 @@ function changeBoxes(num) {
     boxes = document.querySelectorAll("div.boxes");
 }
 
-let click = 0;
-
-function changeGridLines() {
-    if (click === 0) {
-        if (boxes.length === 1024) {
-            for (let box of boxes) {
-                box.classList.add("no-grid-32");
-            }
-        }
-        else if (boxes.length === 256) {
-            for (let box of boxes) {
-                box.classList.add("no-grid-16");
-            }
-        }
-        else {
-            for (let box of boxes) {
-                box.classList.add("no-grid-8");
-            }
-        }
-        click++;
-    }
-    else {
-        for (let box of boxes) {
-            box.classList.remove("no-grid-32");
-            box.classList.remove("no-grid-16");
-            box.classList.remove("no-grid-8");
-        }
-        click--;
-    }
-}
-
 sketchBox.addEventListener("mouseover", changeColor);
-
 
 let rainbowColors = ["red","yellow","pink","purple","orange","blue",
 "green","brown","black","white","cadetblue","chocolate","coral","gold","aliceblue","honeydew","hotpink"];
