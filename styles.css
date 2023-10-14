@@ -26,7 +26,8 @@ h1 {
 #options {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
+    padding-left: 20px;
 }
 
 #sketch-box {
@@ -34,15 +35,15 @@ h1 {
     width: 464px;
     margin-left: auto;
     margin-right: 80px;
-    border: aliceblue 2px solid;
+    border: gold 2px solid;
     display: flex;
     flex-wrap: wrap;
 }
 
 .boxes {
-    background-color: rgb(88, 81, 81);
+    background-color: #CDC7E5;
     flex-grow: 1;
-    border: purple 0.1px solid;
+    border: #6C1093 0.1px solid;
 }
 
 .boxes8 {
@@ -73,4 +74,34 @@ h1 {
 .no-grid-32 {
     border: none;
     height : 16.59px;
+}
+
+button { 
+    color: gold;
+    background-color: #7912A5;    
+    border: none;    
+    font-family: 'AR One Sans';    
+    height: 28px;
+    border-radius: 4px;
+}
+
+#box-size {
+    display: flex;
+    gap: 15px;
+}
+
+#box-size button {
+    flex-shrink: 0;
+    width: 90px;
+}
+
+#color-selector {
+    align-self: center;
+    background: none;
+    cursor: pointer;
+    height: 85px;
+    width: 85px;
+    border-radius: 8px;
+    border-color: purple;
+    background-color: gold;
 }

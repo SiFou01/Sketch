@@ -13,11 +13,13 @@
     <h1>SKETCH</h1>
     <div id="container">
         <div id="options">
-            <button onclick="changeBoxes(8)">8x8</button>
-            <button onclick="changeBoxes(16)">16x16</button>
-            <button onclick="changeBoxes(32)">32x32</button>
-            <button onclick="changeGridLines()">grid-lines</button>
-            <input type="color" onchange="getSelectedColor()">
+            <input id="color-selector" type="color" onchange="getSelectedColor()">
+            <div id="box-size">
+                <button onclick="changeBoxes(8)">8x8</button>
+                <button onclick="changeBoxes(16)">16x16</button>
+                <button onclick="changeBoxes(32)">32x32</button>
+            </div>
+            <button onclick="changeGridLines()">HIDE GRID LINES</button>
             <button onclick="reset()">Reset</button>
             <button onclick="erase()">Eraser</button>
             <select>
@@ -25,6 +27,7 @@
                 <option>click</option>
             </select>
             <button onclick="activateRainbowMode()">Rainbow mode</button>
+            <button onclick="activateGrayScale()">Gray Scale</button>
         </div>
         <div id="sketch-box"></div>
     </div>
