@@ -48,19 +48,30 @@ function changeBoxes(num) {
 
 sketchBox.addEventListener("mouseover", changeColor);
 
-let rainbowColors = ["red","yellow","pink","purple","orange","blue",
-"green","brown","black","white","cadetblue","chocolate","coral","gold","aliceblue","honeydew","hotpink"];
+let rainbowColors = ["red","yellow","orange","green","blue","indigo","violet"];
 
 let activate = 0;
+let rainbowBtn = document.getElementById("rainbow");
 
 function activateRainbowMode() {
-    selectedColor = rainbowColors[Math.floor(Math.random() * 17)];
-    activate++;
+    if (activate === 0) {
+        rainbowBtn.classList.add("selected");
+        activate++;
+    }
+    else {
+        rainbowBtn.classList.remove("selected");
+        selectedColor = document.querySelector("input").value;
+        activate--;
+    }
+}
+
+function getRandomColor() {
+    selectedColor = rainbowColors[Math.floor(Math.random() * 7)];
 }
 
 function changeColor(box) {
-    if (activate) {
-        activateRainbowMode();
+    if (activate === 1) {
+        getRandomColor();
     }
     box.target.style.backgroundColor = selectedColor;
 }

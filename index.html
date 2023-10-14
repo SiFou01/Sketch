@@ -15,7 +15,7 @@
         <div id="options">
             <div id="color-choice">
                 <p>Pen Color</p>
-                <input id="color-selector" value="black" type="color" onchange="getSelectedColor()">
+                <input id="color-selector" type="color" onchange="getSelectedColor()">
             </div>
             <select>
                 <option>HOVER</option>
@@ -30,7 +30,7 @@
                 <button onclick="reset()">Reset</button>
                 <button onclick="erase()" id="eraser">Eraser</button>
             </div>
-            <button onclick="activateRainbowMode()">Rainbow mode</button>
+            <button onclick="activateRainbowMode()" id="rainbow">Rainbow Mode</button>
         </div>
         <div id="sketch-box"></div>
     </div>
