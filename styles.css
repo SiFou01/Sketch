@@ -83,11 +83,23 @@ h1 {
 
 button { 
     color: gold;
-    background-color: #7912A5;    
-    border: none;    
+    background-color: #BB2FEE;    
+    border: 2px solid #7912A5;    
     font-family: 'AR One Sans';    
     height: 28px;
     border-radius: 4px;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 5px 6px #AB12E2;
+}
+
+/*button:hover {
+        background-color: #270637;
+        box-shadow: 0px 0px 6px 3px #BB2FEE;
+} */
+
+.selected {
+    background-color: #270637;
+    box-shadow: 0px 0px 7px 1px #AB12E2;
 }
 
 #box-size {

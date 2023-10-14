@@ -2,9 +2,16 @@ let sketchBox = document.getElementById("sketch-box");
 
 let boxes;
 
+let btn8 = document.getElementById("btn8");
+let btn16 = document.getElementById("btn16");
+let btn32 = document.getElementById("btn32");
+
 changeBoxes(16);
 
 function changeBoxes(num) {
+    btn8.classList.remove("selected");
+    btn16.classList.remove("selected");
+    btn32.classList.remove("selected");
     while (sketchBox.firstChild) {
         sketchBox.removeChild(sketchBox.firstChild);
     }
@@ -15,6 +22,7 @@ function changeBoxes(num) {
                 box.classList.add("boxes");
                 box.classList.add("boxes8");
                 sketchBox.appendChild(box);
+                btn8.classList.add("selected");
             }
             break;
         case 16 :
@@ -23,6 +31,7 @@ function changeBoxes(num) {
                 box.classList.add("boxes");
                 box.classList.add("boxes16");
                 sketchBox.appendChild(box);
+                btn16.classList.add("selected");
             }
             break;
         case 32 :
@@ -31,6 +40,7 @@ function changeBoxes(num) {
                 box.classList.add("boxes");
                 box.classList.add("boxes32");
                 sketchBox.appendChild(box);
+                btn32.classList.add("selected");
             }
     }
     boxes = document.querySelectorAll("div.boxes");
@@ -99,8 +109,20 @@ function reset() {
     }
 }
 
+let eraser = 0;
+let eraserBtn = document.getElementById("eraser");
+
 function erase() {
-    selectedColor = "rgb(88, 81, 81)";
+    if (eraser === 0) {
+        selectedColor = "#CDC7E5";
+        eraserBtn.classList.add("selected");
+        eraser++;
+    }
+    else {
+        selectedColor = document.querySelector("input").value;
+        eraser--;
+        eraserBtn.classList.remove("selected");
+    }
 }
 
 let select = document.querySelector("select");

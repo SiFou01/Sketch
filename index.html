@@ -15,21 +15,21 @@
         <div id="options">
             <div id="color-choice">
                 <p>Pen Color</p>
-                <input id="color-selector" type="color" onchange="getSelectedColor()">
+                <input id="color-selector" value="black" type="color" onchange="getSelectedColor()">
             </div>
             <select>
                 <option>HOVER</option>
                 <option>CLICK</option>
             </select>
             <div id="box-size">
-                <button onclick="changeBoxes(8)">8x8</button>
-                <button onclick="changeBoxes(16)">16x16</button>
-                <button onclick="changeBoxes(32)">32x32</button>
+                <button onclick="changeBoxes(8)" id="btn8">8x8</button>
+                <button onclick="changeBoxes(16)" class="selected" id="btn16">16x16</button>
+                <button onclick="changeBoxes(32)" id="btn32">32x32</button>
             </div>
             <button onclick="changeGridLines()">HIDE GRID LINES</button>
             <div id="reset-erase">
                 <button onclick="reset()">Reset</button>
-                <button onclick="erase()">Eraser</button>
+                <button onclick="erase()" id="eraser">Eraser</button>
             </div>
             <button onclick="activateRainbowMode()">Rainbow mode</button>
         </div>
